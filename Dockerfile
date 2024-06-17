@@ -1,4 +1,4 @@
-FROM elixir:1.13.4-alpine AS dev
+FROM elixir:1.17-alpine AS dev
 RUN apk add build-base git bash
 WORKDIR /app
 # ENV MIX_HOME=/mix

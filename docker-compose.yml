@@ -8,14 +8,14 @@ services:
       - .env.dev
     stdin_open: true
     tty: true
-    # command: ./bot
+    command: mix phx.server
     volumes:
       - ".:/app"
       - mix:/mix
-    # ports:
-    #   - "3000:3000"
-    # depends_on:
-    #   - db
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
   db:
     image: "healthcheck/postgres:alpine"
     environment:
